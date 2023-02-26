@@ -1,9 +1,9 @@
-const buttons = document.querySelectorAll("button");
+let name = prompt("Please enter your name:");
 
-buttons.forEach(button => {
-  button.style.backgroundColor = "purple";
-  button.style.color = "white";
-  button.style.padding = "10px 20px";
-  button.style.borderRadius = "5px";
-  button.style.fontSize = "18px";
+let button = document.createElement("button");
+button.innerHTML = "Continue";
+document.body.appendChild(button);
+
+button.addEventListener("click", function() {
+  alert("Hello, " + name + "! Welcome to our website.");
 });
