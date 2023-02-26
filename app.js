@@ -1,17 +1,26 @@
 console.log("Starting script...");
 
+const { MongoClient, ServerApiVersion } = require('mongodb');
 const uri = "mongodb+srv://xinfangwu:UwcpHfHsbltkQPEA@cluster0.rrs7eyk.mongodb.net/?retryWrites=true&w=majority"
-const client = new MongoClient(uri);
+const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
 
 let nameInput = document.getElementById("nameInput");
 let continueButton = document.getElementById("continueButton");
 
-client.connect().then(() => {
+/*client.connect().then(() => {
   console.log("Connected to MongoDB");
   // Perform database operations here
 }).catch(err => {
   console.error("Failed to connect to MongoDB", err);
+}); */
+
+client.connect(err => {
+  const collection = client.db("test").collection("devices");
+  // perform actions on the collection object
+  console.log("Connected to MondoDB")
+  client.close();
 });
+
 
 continueButton.addEventListener("click", function() {
   let name = nameInput.value;
