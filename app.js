@@ -1,3 +1,5 @@
+console.log("Starting script...");
+
 const uri = "mongodb+srv://xinfangwu:UwcpHfHsbltkQPEA@cluster0.rrs7eyk.mongodb.net/?retryWrites=true&w=majority"
 const client = new MongoClient(uri);
 
