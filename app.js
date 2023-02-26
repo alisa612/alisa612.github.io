@@ -1,6 +1,6 @@
-const MongoClient = require('mongodb').MongoClient;
+
 const uri = "mongodb+srv://xinfangwu:UwcpHfHsbltkQPEA@cluster0.rrs7eyk.mongodb.net/?retryWrites=true&w=majority"
-const client = new MongoClient(uri, { useNewUrlParser: true });
+const client = new MongoClient(uri);
 
 let nameInput = document.getElementById("nameInput");
 let continueButton = document.getElementById("continueButton");
