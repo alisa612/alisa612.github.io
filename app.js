@@ -1,6 +1,6 @@
 console.log("Starting script...");
 
-import { MongoClient } from 'mongodb';
+import { MongoClient } from './node_modules/mongodb';
 const uri = "mongodb+srv://xinfangwu:UwcpHfHsbltkQPEA@cluster0.rrs7eyk.mongodb.net/?retryWrites=true&w=majority"
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true});
 
