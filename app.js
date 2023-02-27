@@ -1,11 +1,8 @@
 console.log("Starting script...");
 
-import { MongoClient } from './node_modules/mongodb';
-const uri = "mongodb+srv://xinfangwu:UwcpHfHsbltkQPEA@cluster0.rrs7eyk.mongodb.net/?retryWrites=true&w=majority"
-const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true});
-
-let nameInput = document.getElementById("nameInput");
-let continueButton = document.getElementById("continueButton");
+//import { MongoClient } from './node_modules/mongodb';
+//const uri = "mongodb+srv://xinfangwu:UwcpHfHsbltkQPEA@cluster0.rrs7eyk.mongodb.net/?retryWrites=true&w=majority"
+//const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true});
 
 /*client.connect().then(() => {
   console.log("Connected to MongoDB");
@@ -14,24 +11,21 @@ let continueButton = document.getElementById("continueButton");
   console.error("Failed to connect to MongoDB", err);
 }); */
 
-client.connect(err => {
-  const collection = client.db("test").collection("devices");
-  // perform actions on the collection object
-  console.log("Connected to MondoDB")
-  client.close();
-});
+let nameInput1 = document.getElementById("nameInput1");
+let nameInput2 = document.getElementById("nameInput2");
+let nameInput3 = document.getElementById("nameInput3");
+let continueButton = document.getElementById("continueButton");
 
+function displayText() {
+  let name1 = nameInput1.value;
+  let name2 = nameInput2.value;
+  let name3 = nameInput3.value;
 
-continueButton.addEventListener("click", function() {
-  let name = nameInput.value;
-  alert("Hello, " + name + "! Welcome to our website.");
+  document.getElementById("nameInput1").textContent = name1;
+  document.getElementById("nameInput2").textContent = name2;
+  document.getElementById("nameInput3").textContent = name3;
+  document.getElementById("nameInput1").style.display = "block";
+  document.getElementById("nameInput2").style.display = "block";
+  document.getElementById("nameInput3").style.display = "block";
 
-  const newUser = { name: nameInput.value};
-  client.db().collection("users").insertOne(newUser, (err, result) => {
-    if (err) {
-      console.error("Failed to insert user", err);
-    } else {
-      console.log("Inserted user", newUser);
-    }
-  });
-});
+};

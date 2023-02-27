@@ -8,8 +8,17 @@
       <h1>Welcome to EasyRef!</h1>
       <br><br>
     </div>
-    <input type="text" placeholder="Enter your name" id="nameInput">
-    <button id="continueButton">Continue</button>
+    <input type="text" placeholder="Enter first participant's name" id="nameInput1">
+    <br>
+    <input type="text" placeholder="Enter second participant's name" id="nameInput2">
+    <br>
+    <input type="text" placeholder="Enter third participant's name" id="nameInput3">
+    <br>
+    <button onclick=displaytext() id="continueButton">Continue</button>
+
+    <p id="nameInput1" style="display:none;"></p>
+    <p id="nameInput2" style="display:none;"></p>
+    <p id="nameInput3" style="display:none;"></p>
     <script src="app.js" type="module"></script>
   </body>
 </html>
