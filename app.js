@@ -21,11 +21,11 @@ function displayText() {
   let name2 = nameInput2.value;
   let name3 = nameInput3.value;
 
-  document.getElementById("nameInput1").textContent = name1;
-  document.getElementById("nameInput2").textContent = name2;
-  document.getElementById("nameInput3").textContent = name3;
-  document.getElementById("nameInput1").style.display = "block";
-  document.getElementById("nameInput2").style.display = "block";
-  document.getElementById("nameInput3").style.display = "block";
+  document.getElementById("text1").textContent = name1;
+  document.getElementById("text2").textContent = name2;
+  document.getElementById("text3").textContent = name3;
+  document.getElementById("text1").style.display = "block";
+  document.getElementById("text2").style.display = "block";
+  document.getElementById("text3").style.display = "block";
 
 };
